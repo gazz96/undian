@@ -13,7 +13,7 @@ function view(string $path, array $data = [])
 function url($path = "")
 {
     $path = trim($path, "/");
-    return "https://bagistudio.com/eden/" . $path;
+    return "http://undian.test/" . $path;
 }
 
 function flash($name = null)

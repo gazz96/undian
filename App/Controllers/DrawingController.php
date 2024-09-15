@@ -10,9 +10,7 @@ class DrawingController
 {
     public function index($request)
     {
-
         $drawings = Drawing::orderBy('id', 'DESC')->paginate(20);
-
         return view('drawing.index', [
             'drawings' => $drawings
         ]);
@@ -39,8 +37,7 @@ class DrawingController
 
         if($validation->fails())
         {   
-            $errors = $validation->errors()->firstOfAll();
-            $_SESSION['errors'] = $errors;
+            $_SESSION['errors'] = $validation->errors()->firstOfAll();
             $_SESSION['oldInputs'] = $_POST;
             return $service->back();
         }
@@ -51,7 +48,6 @@ class DrawingController
         $target_file = $target_dir . basename($_FILES["file"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-        // Check if image file is a actual image or fake image
         
         $check = getimagesize($_FILES["file"]["tmp_name"]);
         if($check !== false) 
