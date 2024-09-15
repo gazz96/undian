@@ -1,0 +1,29 @@
+{
+    "name": "gazz/undian",
+    "description": "Simple doorprize",
+    "type": "project",
+    "authors": [
+        {
+            "name": "bagas",
+            "email": "93211149+StefanusFerdyana@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^8.83",
+        "illuminate/database": "^8.83",
+        "klein/klein": "^2.1",
+        "illuminate/events": "^8.83",
+        "jenssegers/blade": "^1.4",
+        "illuminate/pagination": "^8.83",
+        "rakit/validation": "^1.4",
+        "phpoffice/phpspreadsheet": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "helpers/mainHelper.php"
+        ]
+    }
+}

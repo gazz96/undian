@@ -1,0 +1,6 @@
+Options -MultiViews
+
+RewriteEngine On
+RewriteBase /eden/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
